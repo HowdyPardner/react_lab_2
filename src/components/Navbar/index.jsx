@@ -12,16 +12,22 @@ import './index.css'
 
 const Navbar = () => {
   return (
-    <div className='navbar-container'>
-      <div>Navbar Component</div>
-      <div className='navbar-button-container'>
-        <NavbarButton />
-        <NavbarButton />
-        <NavbarButton />
-        <NavbarButton />
+    <div className="navbar-grid-container">
+
+      <div className='navbar-container'>
+
+        <div>Navbar Component</div>
+        <div className='navbar-button-container'>
+          <NavbarButton />
+          <NavbarButton />
+          <NavbarButton />
+          <NavbarButton />
+        </div>
+
       </div>
       
     </div>
+    
   )
 }
 
