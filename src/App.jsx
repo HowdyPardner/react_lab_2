@@ -1,17 +1,31 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './components/Navbar'
 import Form from './components/Form'
+import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [hideSidebar, setHideSidebar] = useState(false)
+
+
+  let handleClick = () =>{
+    setHideSidebar(!hideSidebar)
+    console.log(hideSidebar)
+  }
+
+  let createHideButton = () => {
+    return (<button onClick={handleClick}>Hide/Show the Sidebar</button>)
+  }
+
 
   return (
     <>
-     <Navbar />
-     <Form />
+    <div className="grid-container">
+      <Navbar />
+      <Sidebar  createHideButton={createHideButton} setHideSidebar={setHideSidebar} hideSidebar={hideSidebar}/>
+      <Form/>
+    </div>
+   
     </>
   )
 }

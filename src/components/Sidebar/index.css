@@ -1,0 +1,12 @@
+.sidebar-grid-container {
+    grid-column: span 1;
+    grid-row: span 2;
+    min-width: 150px;
+    border: 1px solid black;
+}
+
+
+.hidden {
+    display: none;
+}
+
